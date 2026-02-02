@@ -11,12 +11,10 @@ import BackgroundEffect from './components/BackgroundEffect';
 
 function App() {
   return (
-    <div className="relative text-gray-200 font-sans selection:bg-cyan selection:text-black">
+    <div className="min-h-screen bg-black text-white relative font-sans overflow-x-hidden selection:bg-cyan selection:text-black">
       <BackgroundEffect />
-      
       <Navbar />
-      
-      <main className="relative z-10 flex flex-col gap-10 md:gap-20">
+      <main>
         <Hero />
         <About />
         <Skills />
@@ -24,7 +22,6 @@ function App() {
         <Services />
         <Contact />
       </main>
-      
       <Footer />
     </div>
   );

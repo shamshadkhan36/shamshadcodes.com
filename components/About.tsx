@@ -8,10 +8,10 @@ const About: React.FC = () => {
     <section id="about" className="py-20 relative">
       <div className="container mx-auto px-6">
         <SectionTitle title="About Me" subtitle="Who I Am" />
-        
+
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Image Frame */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -19,10 +19,10 @@ const About: React.FC = () => {
           >
             <div className="absolute -inset-2 bg-gradient-to-r from-cyan to-neonpurple rounded-lg opacity-75 blur-lg group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
             <div className="relative border-2 border-cyan/50 bg-black p-2 rounded-lg clip-path-polygon-[20px_0,100%_0,100%_calc(100%-20px),calc(100%-20px)_100%,0_100%,0_20px]">
-              <img 
-                src="https://picsum.photos/seed/techworkspace/800/600" 
-                alt="Workspace" 
-                className="w-full h-full object-cover rounded shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-500"
+              <img
+                src="/images/profile.jpg"
+                alt="Workspace"
+                className="w-full h-full object-cover object-top rounded shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-500"
               />
               {/* Overlay lines */}
               <div className="absolute top-0 left-0 w-full h-1 bg-cyan shadow-[0_0_10px_#00f3ff]"></div>
@@ -31,11 +31,11 @@ const About: React.FC = () => {
           </motion.div>
 
           {/* Bio Content */}
-          <motion.div 
-             initial={{ opacity: 0, x: 50 }}
-             whileInView={{ opacity: 1, x: 0 }}
-             viewport={{ once: true }}
-             className="text-gray-300"
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="text-gray-300"
           >
             <h3 className="text-3xl font-orbitron font-bold text-white mb-6">
               Full Stack Wizard & <span className="text-neonpink">AI Enthusiast</span>
@@ -56,7 +56,7 @@ const About: React.FC = () => {
                   <p className="text-white font-bold">Shamshad Khan</p>
                 </div>
               </div>
-              
+
               <div className="bg-white/5 border border-white/10 p-4 rounded hover:border-cyan/50 transition-colors flex items-center gap-4">
                 <div className="p-2 bg-neonpurple/10 rounded-full text-neonpurple"><Mail size={20} /></div>
                 <div>
