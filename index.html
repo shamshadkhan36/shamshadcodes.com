@@ -1,93 +1,152 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shamshad Khan | Full Stack Developer</title>
+    
+    <!-- Primary SEO Metadata -->
+    <title>ShamshadCodes | Web, App & Software Development Partner</title>
+    <meta name="title" content="ShamshadCodes | Web, App & Software Development Partner" />
+    <meta name="description" content="ShamshadCodes builds high-performance business websites, e-commerce stores, cross-platform mobile apps, custom software, and WhatsApp automations to help businesses grow online." />
+    <meta name="keywords" content="ShamshadCodes, Shamshad Khan, Full Stack Developer, Website Development Mumbai, E-commerce Development, Flutter Mobile Apps, WhatsApp Automation, Custom Business Software, Python Django Developer" />
+    <meta name="author" content="Shamshad Khan" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://shamshadcodes.com/" />
+    
+    <!-- Theme & Mobile Bar Color -->
+    <meta name="theme-color" content="#090D16" />
+    <meta name="msapplication-TileColor" content="#090D16" />
+    
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shamshadcodes.com/" />
+    <meta property="og:title" content="ShamshadCodes | Web, App & Software Development Partner" />
+    <meta property="og:description" content="Turn visitors into customers with high-converting websites, scalable mobile apps, and business automations engineered by Shamshad Khan. Starting from ₹10,000." />
+    <meta property="og:image" content="https://shamshadcodes.com/images/profile.jpg" />
+    <meta property="og:site_name" content="ShamshadCodes" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter / X -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://shamshadcodes.com/" />
+    <meta property="twitter:title" content="ShamshadCodes | Web, App & Software Development Partner" />
+    <meta property="twitter:description" content="Turn visitors into customers with high-converting websites, scalable mobile apps, and business automations engineered by Shamshad Khan. Starting from ₹10,000." />
+    <meta property="twitter:image" content="https://shamshadcodes.com/images/profile.jpg" />
+
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN Configured for modern dark luxury aesthetic) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
+        darkMode: 'class',
         theme: {
           extend: {
             colors: {
-              cyan: {
-                DEFAULT: '#00f3ff',
-                dim: 'rgba(0, 243, 255, 0.1)',
-                glow: 'rgba(0, 243, 255, 0.6)',
+              brand: {
+                50: '#f0f9ff',
+                100: '#e0f2fe',
+                200: '#bae6fd',
+                300: '#7dd3fc',
+                400: '#38bdf8',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                700: '#0369a1',
+                800: '#075985',
+                900: '#0c4a6e',
+                950: '#082f49',
               },
-              neonpink: {
-                DEFAULT: '#ff00ff',
-                dim: 'rgba(255, 0, 255, 0.1)',
+              indigo: {
+                accent: '#6366f1',
+                glow: '#818cf8',
               },
-              neonpurple: {
-                DEFAULT: '#bd00ff',
+              emerald: {
+                accent: '#10b981',
+                glow: '#34d399',
               },
-              darkbg: '#050505',
-              glass: 'rgba(255, 255, 255, 0.05)',
+              dark: {
+                bg: '#080C14',
+                surface: '#0E1524',
+                card: '#121B2F',
+                border: '#1E293B',
+                muted: '#334155'
+              }
             },
             fontFamily: {
-              orbitron: ['Orbitron', 'sans-serif'],
-              rajdhani: ['Rajdhani', 'sans-serif'],
-              code: ['Fira Code', 'monospace'],
+              sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'monospace'],
             },
-            animation: {
-              'spin-slow': 'spin 10s linear infinite',
-              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-              'glitch': 'glitch 1s linear infinite',
-            },
-            keyframes: {
-              glitch: {
-                '2%, 64%': { transform: 'translate(2px,0) skew(0deg)' },
-                '4%, 60%': { transform: 'translate(-2px,0) skew(0deg)' },
-                '62%': { transform: 'translate(0,0) skew(5deg)' },
-              },
-            },
+            boxShadow: {
+              'glow-brand': '0 0 35px -5px rgba(14, 165, 233, 0.25)',
+              'glow-indigo': '0 0 35px -5px rgba(99, 102, 241, 0.25)',
+              'glow-emerald': '0 0 35px -5px rgba(16, 185, 129, 0.25)',
+              'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+            }
           },
         },
       }
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-      body {
-        background-color: #050505;
-        color: #e2e8f0;
-        overflow-x: hidden;
-      }
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #050505; 
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #00f3ff; 
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #bd00ff; 
-      }
-      .perspective-1000 {
-        perspective: 1000px;
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.1",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
-    "react/": "https://aistudiocdn.com/react@^19.2.1/",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
-    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.25"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
-  <body>
+
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://shamshadcodes.com/#organization",
+          "name": "ShamshadCodes",
+          "url": "https://shamshadcodes.com",
+          "logo": "https://shamshadcodes.com/images/profile.jpg",
+          "founder": {
+            "@type": "Person",
+            "name": "Shamshad Khan",
+            "jobTitle": "Full Stack Developer & Founder",
+            "email": "samsamkhan36@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Mumbai",
+              "addressRegion": "Maharashtra",
+              "addressCountry": "India"
+            }
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-9137226861",
+            "contactType": "customer service",
+            "availableLanguage": ["English", "Hindi"]
+          },
+          "sameAs": [
+            "https://github.com",
+            "https://linkedin.com"
+          ]
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://shamshadcodes.com/#service",
+          "name": "ShamshadCodes Software Development",
+          "image": "https://shamshadcodes.com/images/profile.jpg",
+          "priceRange": "₹10,000 - ₹50,000+",
+          "telephone": "+91-9137226861",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Mumbai",
+            "addressRegion": "Maharashtra",
+            "addressCountry": "India"
+          },
+          "openingHours": "Mo-Sa 09:00-20:00"
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/index.css">
+  </head>
+  <body class="bg-[#080C14] text-slate-100 font-sans selection:bg-brand-500 selection:text-white antialiased overflow-x-hidden">
     <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+    <script type="module" src="/index.tsx"></script>
+  </body>
 </html>

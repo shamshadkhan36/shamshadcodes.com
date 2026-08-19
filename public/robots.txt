@@ -1,0 +1,5 @@
+# robots.txt for ShamshadCodes.com
+User-agent: *
+Allow: /
+
+Sitemap: https://shamshadcodes.com/sitemap.xml

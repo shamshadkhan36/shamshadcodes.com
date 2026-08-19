@@ -1,0 +1,105 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { PROCESS_STEPS } from '../constants';
+import SectionHeading from './ui/SectionHeading';
+import { Check, ArrowRight } from 'lucide-react';
+import Button from './ui/Button';
+
+export const Process: React.FC = () => {
+  return (
+    <section id="process" className="py-24 bg-[#090E1A]/60 relative border-t border-slate-800/80">
+      <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
+        <SectionHeading
+          badge="Execution Process"
+          badgeVariant="brand"
+          title="From Concept To Launch In"
+          highlightText="5 Clear Steps"
+          subtitle="A structured, transparent engineering process designed to deliver high-quality websites and software on time and within budget."
+        />
+
+        <div className="relative max-w-5xl mx-auto">
+          {/* Vertical Connecting Line on Desktop */}
+          <div className="hidden md:block absolute left-1/2 top-8 bottom-8 w-[2px] bg-gradient-to-b from-brand-500/40 via-indigo-500/40 to-emerald-500/40 -translate-x-1/2"></div>
+
+          <div className="space-y-8 md:space-y-12">
+            {PROCESS_STEPS.map((step, index) => {
+              const isEven = index % 2 === 0;
+              return (
+                <motion.div
+                  key={step.step}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  className={`flex flex-col md:flex-row items-center gap-6 md:gap-12 ${
+                    isEven ? 'md:flex-row' : 'md:flex-row-reverse'
+                  }`}
+                >
+                  {/* Step Card Content */}
+                  <div className={`w-full md:w-1/2 ${isEven ? 'md:text-right' : 'md:text-left'}`}>
+                    <div className="p-6 sm:p-7 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all shadow-xl">
+                      <div className={`flex items-center gap-2 mb-2 ${isEven ? 'md:justify-end' : 'md:justify-start'}`}>
+                        <span className="text-xs font-mono font-bold text-brand-400 uppercase tracking-wider">
+                          Phase {step.step}
+                        </span>
+                        <span className="text-xs text-slate-500">•</span>
+                        <span className="text-xs font-medium text-slate-400">
+                          {step.tagline}
+                        </span>
+                      </div>
+
+                      <h3 className="text-xl font-bold text-white mb-2.5">
+                        {step.title}
+                      </h3>
+
+                      <p className="text-sm text-slate-400 leading-relaxed mb-5">
+                        {step.description}
+                      </p>
+
+                      {/* Deliverables Chips */}
+                      <div className={`flex flex-wrap gap-1.5 ${isEven ? 'md:justify-end' : 'md:justify-start'}`}>
+                        {step.deliverables.map((item, i) => (
+                          <span
+                            key={i}
+                            className="inline-flex items-center gap-1 text-[11px] font-medium text-slate-300 bg-slate-800/90 border border-slate-700/60 px-2.5 py-1 rounded-lg"
+                          >
+                            <Check className="w-3 h-3 text-emerald-400" />
+                            {item}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Center Step Badge */}
+                  <div className="relative z-10 flex-shrink-0 flex items-center justify-center">
+                    <div className="w-14 h-14 rounded-2xl bg-slate-950 border-2 border-brand-500/60 flex items-center justify-center text-white font-mono font-extrabold text-lg shadow-xl shadow-brand-500/20">
+                      {step.step}
+                    </div>
+                  </div>
+
+                  {/* Empty Spacer on Opposite Side */}
+                  <div className="hidden md:block w-1/2"></div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Action Button */}
+        <div className="mt-16 text-center">
+          <Button
+            variant="primary"
+            size="md"
+            href="#contact"
+            icon={<ArrowRight className="w-4 h-4" />}
+          >
+            Start Step 01: Discuss Your Project
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Process;
