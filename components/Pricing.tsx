@@ -94,7 +94,7 @@ export const Pricing: React.FC = () => {
                 </Button>
 
                 <a
-                  href={`https://wa.me/919137226861?text=Hi%20Shamshad,%20I%20am%20interested%20in%20the%20${encodeURIComponent(plan.name)}%20package%20(${plan.price}).`}
+                  href={`https://wa.me/919370262177?text=Hi%20Shamshad,%20I%20am%20interested%20in%20the%20${encodeURIComponent(plan.name)}%20package%20(${plan.price}).`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full text-center text-xs font-semibold text-slate-400 hover:text-emerald-400 py-1.5 flex items-center justify-center gap-1.5 transition-colors"

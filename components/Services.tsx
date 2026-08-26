@@ -76,7 +76,7 @@ export const Services: React.FC = () => {
                 {/* Card Bottom Actions */}
                 <div className="pt-4 border-t border-slate-800 flex items-center justify-between">
                   <a
-                    href={`https://wa.me/919137226861?text=Hi%20Shamshad,%20I%20am%20interested%20in%20your%20${encodeURIComponent(service.title)}%20service.`}
+                    href={`https://wa.me/919370262177?text=Hi%20Shamshad,%20I%20am%20interested%20in%20your%20${encodeURIComponent(service.title)}%20service.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs font-semibold text-emerald-400 hover:text-emerald-300 inline-flex items-center gap-1.5"

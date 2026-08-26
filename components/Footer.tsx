@@ -120,8 +120,8 @@ export const Footer: React.FC = () => {
                 <span>Chat on WhatsApp</span>
               </a>
 
-              <div className="flex items-center gap-2 pt-1 text-xs text-slate-500">
-                <MapPin className="w-4 h-4 text-slate-500 flex-shrink-0" />
+              <div className="flex items-start gap-2 pt-1 text-xs text-slate-500">
+                <MapPin className="w-4 h-4 text-slate-500 flex-shrink-0 mt-0.5" />
                 <span>{BRAND.location}</span>
               </div>
             </div>

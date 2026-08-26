@@ -184,7 +184,7 @@ export const Projects: React.FC = () => {
                   </div>
 
                   <a
-                    href={`https://wa.me/919137226861?text=Hi%20Shamshad,%20I%20saw%20your%20${encodeURIComponent(project.title)}%20project%20and%20want%20something%20similar.`}
+                    href={`https://wa.me/919370262177?text=Hi%20Shamshad,%20I%20saw%20your%20${encodeURIComponent(project.title)}%20project%20and%20want%20something%20similar.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-xs font-semibold text-brand-400 hover:text-brand-300 group/link"

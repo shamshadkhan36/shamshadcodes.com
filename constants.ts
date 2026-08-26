@@ -40,10 +40,10 @@ export const BRAND = {
   tagline: 'Build Your Digital Business With ShamshadCodes',
   subheading: 'Websites, mobile apps, custom software and automation solutions designed to help businesses grow online.',
   email: 'samsamkhan36@gmail.com',
-  phone: '+91 91372 26861',
-  phoneDisplay: '+91 91372 26861',
-  whatsappUrl: 'https://wa.me/919137226861?text=Hi%20Shamshad,%20I%20found%20ShamshadCodes%20and%20would%20like%20to%20discuss%20a%20project.',
-  location: 'Mumbai, Maharashtra, India',
+  phone: '+91 93702 62177',
+  phoneDisplay: '+91 93702 62177',
+  whatsappUrl: 'https://wa.me/919370262177?text=Hi%20Shamshad,%20I%20found%20ShamshadCodes%20and%20would%20like%20to%20discuss%20a%20project.',
+  location: 'Shop No. 7, Near KGN Medical, Jadhav Pada, Dhaniv Baug, Nallasopara East, Maharashtra',
   availability: 'Available for New Projects',
   responseGuarantee: 'Guaranteed response within 2 hours',
   experienceYears: '5+',
@@ -522,6 +522,6 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 export const SOCIAL_LINKS: SocialLink[] = [
   { platform: 'GitHub', url: 'https://github.com', icon: Github },
   { platform: 'LinkedIn', url: 'https://linkedin.com', icon: Linkedin },
-  { platform: 'WhatsApp', url: 'https://wa.me/919137226861?text=Hi%20Shamshad,%20I%20found%20ShamshadCodes%20and%20would%20like%20to%20discuss%20a%20project.', icon: MessageSquare },
+  { platform: 'WhatsApp', url: 'https://wa.me/919370262177?text=Hi%20Shamshad,%20I%20found%20ShamshadCodes%20and%20would%20like%20to%20discuss%20a%20project.', icon: MessageSquare },
   { platform: 'Telegram', url: 'https://telegram.org', icon: Send },
 ];
