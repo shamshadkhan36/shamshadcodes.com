@@ -17,7 +17,6 @@ import {
   Bot, 
   Check,
   Laptop,
-  TrendingUp,
   MapPin
 } from 'lucide-react';
 
@@ -110,17 +109,9 @@ export const Projects: React.FC = () => {
 
                       <div className="flex items-start justify-between">
                         <div>
-                          <div className="flex items-center gap-2">
-                            <span className="text-[10px] font-mono uppercase tracking-wider text-brand-700 font-bold bg-brand-50 border border-brand-200 px-2 py-0.5 rounded">
-                              {project.categoryLabel}
-                            </span>
-                            {project.roiMetric && (
-                              <span className="text-[10px] font-mono font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded flex items-center gap-1">
-                                <TrendingUp className="w-2.5 h-2.5 text-emerald-600" />
-                                {project.roiMetric}
-                              </span>
-                            )}
-                          </div>
+                          <span className="text-[10px] font-mono uppercase tracking-wider text-brand-700 font-bold bg-brand-50 border border-brand-200 px-2 py-0.5 rounded">
+                            {project.categoryLabel}
+                          </span>
                           <h4 className="text-base font-bold text-slate-900 mt-1.5 leading-snug">
                             {project.title}
                           </h4>

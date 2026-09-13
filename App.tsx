@@ -5,7 +5,6 @@ import ProblemSolution from './components/ProblemSolution';
 import QuoteEstimator from './components/QuoteEstimator';
 import Services from './components/Services';
 import Projects from './components/Projects';
-import Testimonials from './components/Testimonials';
 import AgencyComparison from './components/AgencyComparison';
 import Guarantees from './components/Guarantees';
 import WhyChooseUs from './components/WhyChooseUs';
@@ -29,7 +28,6 @@ export function App() {
         <QuoteEstimator />
         <Services />
         <Projects />
-        <Testimonials />
         <AgencyComparison />
         <Guarantees />
         <WhyChooseUs />

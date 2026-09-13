@@ -72,7 +72,6 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'Cost Calculator', href: '#estimator' },
   { label: 'Work', href: '#projects' },
   { label: 'Why Us', href: '#why-us' },
-  { label: 'Reviews', href: '#reviews' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'Process', href: '#process' },
   { label: 'About', href: '#about' },

@@ -46,8 +46,7 @@ export const Hero: React.FC = () => {
                 <div className="flex text-amber-400">
                   <Star className="w-3.5 h-3.5 fill-amber-400" />
                 </div>
-                <span className="font-bold text-slate-900">{BRAND.rating}</span>
-                <span className="text-slate-500">({BRAND.reviewCount} Client Reviews)</span>
+                <span className="text-slate-500 font-mono font-medium">Top Rated Studio</span>
               </div>
             </div>
 
