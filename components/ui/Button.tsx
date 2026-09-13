@@ -25,22 +25,22 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const sizeStyles = {
-    sm: 'px-3.5 py-1.5 text-xs font-medium gap-1.5',
+    sm: 'px-3.5 py-1.5 text-xs font-semibold gap-1.5',
     md: 'px-5 py-2.5 text-sm font-semibold gap-2',
     lg: 'px-7 py-3.5 text-base font-semibold gap-2.5',
   };
 
   const variantStyles = {
     primary:
-      'bg-gradient-to-r from-brand-500 via-brand-600 to-indigo-600 hover:from-brand-400 hover:via-brand-500 hover:to-indigo-500 text-white shadow-lg shadow-brand-500/20 hover:shadow-brand-500/35 border border-white/10 active:scale-[0.98]',
+      'bg-gradient-to-r from-brand-600 via-brand-500 to-indigo-600 hover:from-brand-500 hover:via-brand-600 hover:to-indigo-500 text-white shadow-lg shadow-brand-500/25 hover:shadow-brand-500/35 border border-white/20 active:scale-[0.98]',
     secondary:
-      'bg-slate-900/80 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-700/60 hover:border-slate-600 shadow-sm active:scale-[0.98]',
+      'bg-white hover:bg-slate-50 text-slate-800 hover:text-slate-900 border border-slate-200 hover:border-slate-300 shadow-sm active:scale-[0.98]',
     whatsapp:
       'bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg shadow-emerald-600/25 hover:shadow-emerald-600/40 border border-emerald-400/20 active:scale-[0.98]',
     outline:
-      'bg-transparent hover:bg-white/5 text-slate-300 hover:text-white border border-slate-700 hover:border-slate-500 active:scale-[0.98]',
+      'bg-white/80 hover:bg-slate-50 text-slate-700 hover:text-slate-900 border border-slate-300 hover:border-slate-400 shadow-sm active:scale-[0.98]',
     ghost:
-      'bg-transparent hover:bg-white/5 text-slate-300 hover:text-white border-transparent active:scale-[0.98]',
+      'bg-transparent hover:bg-slate-100 text-slate-700 hover:text-slate-900 border-transparent active:scale-[0.98]',
   };
 
   const baseStyles = `inline-flex items-center justify-center rounded-xl transition-all duration-200 cursor-pointer select-none font-sans ${

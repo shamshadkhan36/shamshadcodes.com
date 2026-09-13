@@ -2,8 +2,12 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ProblemSolution from './components/ProblemSolution';
+import QuoteEstimator from './components/QuoteEstimator';
 import Services from './components/Services';
 import Projects from './components/Projects';
+import Testimonials from './components/Testimonials';
+import AgencyComparison from './components/AgencyComparison';
+import Guarantees from './components/Guarantees';
 import WhyChooseUs from './components/WhyChooseUs';
 import Process from './components/Process';
 import Pricing from './components/Pricing';
@@ -16,14 +20,18 @@ import BackgroundEffect from './components/BackgroundEffect';
 
 export function App() {
   return (
-    <div className="min-h-screen bg-[#080C14] text-slate-100 relative font-sans overflow-x-hidden selection:bg-brand-500 selection:text-white">
+    <div className="min-h-screen bg-[#FAFAFC] text-slate-900 relative font-sans overflow-x-hidden selection:bg-brand-500 selection:text-white">
       <BackgroundEffect />
       <Navbar />
       <main>
         <Hero />
         <ProblemSolution />
+        <QuoteEstimator />
         <Services />
         <Projects />
+        <Testimonials />
+        <AgencyComparison />
+        <Guarantees />
         <WhyChooseUs />
         <Process />
         <Pricing />
@@ -37,4 +45,4 @@ export function App() {
   );
 }
 
-export default App;
+export default App;

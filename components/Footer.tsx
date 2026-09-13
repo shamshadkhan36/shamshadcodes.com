@@ -1,6 +1,7 @@
 import React from 'react';
 import { BRAND, SERVICES, NAV_ITEMS, SOCIAL_LINKS } from '../constants';
-import { Code2, Heart, ArrowUp, MessageSquare, Mail, Phone, MapPin } from 'lucide-react';
+import { Code2, Heart, ArrowUp, Mail, Phone, MapPin, ShieldCheck, Sparkles } from 'lucide-react';
+import WhatsAppIcon from './ui/WhatsAppIcon';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -8,7 +9,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-[#05080F] border-t border-slate-800/80 pt-16 pb-24 md:pb-16 relative overflow-hidden">
+    <footer className="bg-[#0B1120] text-slate-300 border-t border-slate-800 pt-16 pb-24 md:pb-16 relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
         
         {/* Main Footer Grid */}
@@ -22,13 +23,18 @@ export const Footer: React.FC = () => {
                   <Code2 className="w-5 h-5 text-brand-400" />
                 </div>
               </div>
-              <span className="text-xl font-extrabold tracking-tight text-white">
-                ShamshadCodes
-              </span>
+              <div className="flex flex-col">
+                <span className="text-xl font-extrabold tracking-tight text-white">
+                  ShamshadCodes
+                </span>
+                <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider -mt-0.5">
+                  Tech Studio & Software Agency
+                </span>
+              </div>
             </a>
 
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
-              Premium web development, cross-platform mobile apps, and business process automation solutions built by Shamshad Khan.
+              We engineer high-converting web applications, cross-platform mobile apps (Flutter), and intelligent WhatsApp automations built for revenue scaling.
             </p>
 
             <div className="pt-2 flex items-center gap-3">
@@ -50,10 +56,10 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Col 2: Services (3 cols) */}
+          {/* Col 2: Services & Practice Areas (3 cols) */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-300">
-              Services
+              Practice Areas
             </h4>
             <ul className="space-y-2 text-sm text-slate-400">
               {SERVICES.map((s) => (
@@ -69,10 +75,10 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Col 3: Navigation (2 cols) */}
+          {/* Col 3: Quick Links (2 cols) */}
           <div className="lg:col-span-2 space-y-3">
             <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-300">
-              Quick Links
+              Navigation
             </h4>
             <ul className="space-y-2 text-sm text-slate-400">
               {NAV_ITEMS.map((item) => (
@@ -88,10 +94,10 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Col 4: Contact & Base (3 cols) */}
+          {/* Col 4: Contact & Office (3 cols) */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-300">
-              Get In Touch
+              Direct Contact
             </h4>
             <div className="space-y-2.5 text-sm text-slate-400">
               <a 
@@ -116,13 +122,13 @@ export const Footer: React.FC = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors"
               >
-                <MessageSquare className="w-4 h-4 flex-shrink-0" />
-                <span>Chat on WhatsApp</span>
+                <WhatsAppIcon className="w-4 h-4 flex-shrink-0 fill-current" />
+                <span>Chat on WhatsApp (5m Reply)</span>
               </a>
 
               <div className="flex items-start gap-2 pt-1 text-xs text-slate-500">
                 <MapPin className="w-4 h-4 text-slate-500 flex-shrink-0 mt-0.5" />
-                <span>{BRAND.location}</span>
+                <span className="leading-relaxed">{BRAND.location}</span>
               </div>
             </div>
           </div>
@@ -132,14 +138,14 @@ export const Footer: React.FC = () => {
         {/* Bottom Copyright Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>
-            &copy; {new Date().getFullYear()} {BRAND.name}. All rights reserved. Founded by Shamshad Khan.
+            &copy; {new Date().getFullYear()} {BRAND.legalName}. All rights reserved. Directed by {BRAND.founder}.
           </p>
 
           <div className="flex items-center gap-4">
-            <span className="text-slate-500 font-mono">Fast • Scalable • Secure</span>
+            <span className="text-slate-400 font-mono">100% Code Ownership • 60-Day Warranty</span>
             <button
               onClick={scrollToTop}
-              className="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white transition-colors flex items-center gap-1"
+              className="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white transition-colors flex items-center gap-1 cursor-pointer"
               aria-label="Scroll to top"
             >
               <span>Top</span>

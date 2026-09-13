@@ -41,7 +41,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
           </div>
         )}
 
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight mb-4 font-sans">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight mb-4 font-sans">
           {title}{' '}
           {highlightText && (
             <span className="gradient-text-brand">{highlightText}</span>
@@ -49,7 +49,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
         </h2>
 
         {subtitle && (
-          <p className="text-base sm:text-lg text-slate-400 font-normal leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
             {subtitle}
           </p>
         )}

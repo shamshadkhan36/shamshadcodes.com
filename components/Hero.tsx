@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import { BRAND, TRUST_METRICS } from '../constants';
 import Button from './ui/Button';
 import Badge from './ui/Badge';
+import WhatsAppIcon from './ui/WhatsAppIcon';
 import { 
   ArrowRight, 
-  MessageSquare, 
   Sparkles, 
   CheckCircle, 
   ShieldCheck, 
@@ -16,7 +16,9 @@ import {
   Layers,
   Code2,
   Terminal,
-  Activity
+  Activity,
+  Star,
+  Calculator
 } from 'lucide-react';
 
 export const Hero: React.FC = () => {
@@ -28,32 +30,36 @@ export const Hero: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
-          {/* Left Column: Core Positioning & CTAs */}
+          {/* Left Column: Studio Positioning & CTAs */}
           <motion.div 
             className="lg:col-span-7 text-center lg:text-left"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            {/* Live Availability Pill */}
-            <div className="inline-flex items-center gap-2 mb-6">
+            {/* Live Availability & Rating Pill */}
+            <div className="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-6">
               <Badge variant="emerald" dot={true} pulse={true}>
-                Available for New Client Projects
+                {BRAND.availability}
               </Badge>
-              <span className="hidden sm:inline-block text-xs text-slate-400 font-medium">
-                • 1-on-1 Direct Engineering
-              </span>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 text-xs text-slate-700 font-medium shadow-sm">
+                <div className="flex text-amber-400">
+                  <Star className="w-3.5 h-3.5 fill-amber-400" />
+                </div>
+                <span className="font-bold text-slate-900">{BRAND.rating}</span>
+                <span className="text-slate-500">({BRAND.reviewCount} Client Reviews)</span>
+              </div>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12] mb-6 font-sans">
-              Build Your Digital Business With{' '}
-              <span className="gradient-text-brand">ShamshadCodes</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.12] mb-6 font-sans">
+              Transform Clicks Into Revenue With{' '}
+              <span className="gradient-text-brand">High-Converting Digital Platforms</span>
             </h1>
 
             {/* Subheading */}
-            <p className="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8">
-              Websites, mobile apps, custom software, and automation solutions designed to help ambitious businesses capture more leads, automate workflows, and scale online.
+            <p className="text-lg sm:text-xl text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8">
+              We engineer custom business websites, high-speed mobile apps (iOS & Android), and intelligent WhatsApp automations built to turn ad traffic into paying customers.
             </p>
 
             {/* CTAs Group */}
@@ -61,11 +67,11 @@ export const Hero: React.FC = () => {
               <Button
                 variant="primary"
                 size="lg"
-                href="#contact"
-                icon={<ArrowRight className="w-4 h-4" />}
-                className="w-full sm:w-auto"
+                href="#estimator"
+                icon={<Calculator className="w-4 h-4" />}
+                className="w-full sm:w-auto shadow-lg shadow-brand-500/25"
               >
-                Start Your Project
+                Calculate Project Cost
               </Button>
 
               <Button
@@ -73,10 +79,10 @@ export const Hero: React.FC = () => {
                 size="lg"
                 href={BRAND.whatsappUrl}
                 external
-                icon={<MessageSquare className="w-4 h-4" />}
+                icon={<WhatsAppIcon className="w-4 h-4 fill-white" />}
                 className="w-full sm:w-auto"
               >
-                Chat on WhatsApp
+                Chat on WhatsApp (5m Reply)
               </Button>
 
               <Button
@@ -85,32 +91,32 @@ export const Hero: React.FC = () => {
                 href="#projects"
                 className="w-full sm:w-auto"
               >
-                View My Work
+                View Case Studies
               </Button>
             </div>
 
             {/* Quick Micro-Trust Badges */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-slate-800/80 max-w-xl mx-auto lg:mx-0">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-slate-200 max-w-xl mx-auto lg:mx-0">
               <div className="flex items-center gap-2 text-left">
-                <CheckCircle className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                <span className="text-xs text-slate-300 font-medium">20+ Delivered</span>
+                <CheckCircle className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                <span className="text-xs text-slate-700 font-medium">30+ Deployments</span>
               </div>
               <div className="flex items-center gap-2 text-left">
-                <CheckCircle className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                <span className="text-xs text-slate-300 font-medium">Fast 1-on-1 Support</span>
+                <CheckCircle className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                <span className="text-xs text-slate-700 font-medium">3-7 Day Sprints</span>
               </div>
               <div className="flex items-center gap-2 text-left">
-                <CheckCircle className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                <span className="text-xs text-slate-300 font-medium">Full Stack Stack</span>
+                <CheckCircle className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                <span className="text-xs text-slate-700 font-medium">100% Code Ownership</span>
               </div>
               <div className="flex items-center gap-2 text-left">
-                <CheckCircle className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                <span className="text-xs text-slate-300 font-medium">From ₹10,000</span>
+                <CheckCircle className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                <span className="text-xs text-slate-700 font-medium">From ₹10,000</span>
               </div>
             </div>
           </motion.div>
 
-          {/* Right Column: Premium Interactive Showcase Card */}
+          {/* Right Column: Premium Studio Showcase Card */}
           <motion.div 
             className="lg:col-span-5 relative"
             initial={{ opacity: 0, scale: 0.95 }}
@@ -118,95 +124,95 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.7, delay: 0.15 }}
           >
             {/* Background Glow */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-brand-500/20 via-indigo-500/20 to-emerald-500/20 rounded-3xl blur-2xl opacity-60"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-brand-400/20 via-indigo-400/20 to-emerald-400/20 rounded-3xl blur-2xl opacity-60"></div>
             
             {/* Main Showcase Panel */}
-            <div className="relative rounded-2xl bg-slate-900/90 border border-slate-700/60 p-6 shadow-2xl backdrop-blur-xl">
+            <div className="relative rounded-3xl bg-white border border-slate-200 p-6 sm:p-7 shadow-2xl shadow-slate-200/80 backdrop-blur-xl">
               {/* Card Header Bar */}
-              <div className="flex items-center justify-between pb-4 mb-5 border-b border-slate-800">
+              <div className="flex items-center justify-between pb-4 mb-5 border-b border-slate-100">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full bg-rose-500/80"></div>
                   <div className="w-3 h-3 rounded-full bg-amber-500/80"></div>
                   <div className="w-3 h-3 rounded-full bg-emerald-500/80"></div>
-                  <span className="text-xs font-mono text-slate-400 ml-2">shamshadcodes.config</span>
+                  <span className="text-xs font-mono text-slate-500 ml-2">shamshadcodes.studio</span>
                 </div>
-                <div className="flex items-center gap-1 text-[11px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">
-                  <Activity className="w-3 h-3 animate-pulse" />
+                <div className="flex items-center gap-1 text-[11px] font-mono text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full">
+                  <Activity className="w-3 h-3 animate-pulse text-emerald-600" />
                   <span>99.9% Uptime</span>
                 </div>
               </div>
 
-              {/* Founder Mini Header Card */}
-              <div className="flex items-center gap-4 bg-slate-950/60 border border-slate-800/80 p-3.5 rounded-xl mb-5">
-                <div className="relative w-12 h-12 rounded-xl overflow-hidden border border-brand-500/40 flex-shrink-0">
+              {/* Technical Director Leadership Header */}
+              <div className="flex items-center gap-4 bg-slate-50 border border-slate-200/80 p-3.5 rounded-2xl mb-5">
+                <div className="relative w-12 h-12 rounded-xl overflow-hidden border border-brand-500/30 flex-shrink-0 shadow-sm">
                   <img 
                     src="/images/profile.jpg" 
-                    alt="Shamshad Khan - Founder" 
+                    alt="Shamshad Khan - Technical Director" 
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-sm font-bold text-white truncate">Shamshad Khan</h3>
-                    <span className="text-[10px] text-brand-400 font-mono bg-brand-500/10 px-2 py-0.5 rounded">Lead Engineer</span>
+                    <h3 className="text-sm font-bold text-slate-900 truncate">Shamshad Khan</h3>
+                    <span className="text-[10px] text-brand-700 font-mono bg-brand-50 border border-brand-200 px-2 py-0.5 rounded">Technical Director</span>
                   </div>
-                  <p className="text-xs text-slate-400 truncate">Software Development Partner</p>
+                  <p className="text-xs text-slate-500 truncate">Lead Software Architect & Founder</p>
                 </div>
               </div>
 
               {/* Service Highlights Matrix */}
               <div className="space-y-2.5 mb-5">
-                <div className="flex items-center justify-between p-3 rounded-xl bg-slate-800/40 border border-slate-800 hover:border-brand-500/30 transition-colors">
+                <div className="flex items-center justify-between p-3 rounded-xl bg-slate-50/80 border border-slate-200/80 hover:border-brand-300 hover:bg-white transition-all shadow-sm">
                   <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-brand-500/10 text-brand-400">
+                    <div className="p-2 rounded-lg bg-brand-50 text-brand-600 border border-brand-100">
                       <Globe className="w-4 h-4" />
                     </div>
                     <div>
-                      <p className="text-xs font-semibold text-white">Business & E-Commerce Web</p>
-                      <p className="text-[11px] text-slate-400">React • TypeScript • Tailwind</p>
+                      <p className="text-xs font-semibold text-slate-900">Business Web & E-Commerce</p>
+                      <p className="text-[11px] text-slate-500">React • Next.js • Tailwind CSS</p>
                     </div>
                   </div>
-                  <span className="text-xs font-bold text-emerald-400 font-mono">100% Score</span>
+                  <span className="text-xs font-bold text-emerald-700 font-mono">98+ PageSpeed</span>
                 </div>
 
-                <div className="flex items-center justify-between p-3 rounded-xl bg-slate-800/40 border border-slate-800 hover:border-indigo-500/30 transition-colors">
+                <div className="flex items-center justify-between p-3 rounded-xl bg-slate-50/80 border border-slate-200/80 hover:border-indigo-300 hover:bg-white transition-all shadow-sm">
                   <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-indigo-500/10 text-indigo-400">
+                    <div className="p-2 rounded-lg bg-indigo-50 text-indigo-600 border border-indigo-100">
                       <Smartphone className="w-4 h-4" />
                     </div>
                     <div>
-                      <p className="text-xs font-semibold text-white">Mobile Apps (Android & iOS)</p>
-                      <p className="text-[11px] text-slate-400">Flutter • Firebase • Native Speed</p>
+                      <p className="text-xs font-semibold text-slate-900">Mobile Apps (Android & iOS)</p>
+                      <p className="text-[11px] text-slate-500">Flutter • Firebase • Native 60fps</p>
                     </div>
                   </div>
-                  <span className="text-xs font-bold text-indigo-400 font-mono">Cross-Platform</span>
+                  <span className="text-xs font-bold text-indigo-700 font-mono">Cross-Platform</span>
                 </div>
 
-                <div className="flex items-center justify-between p-3 rounded-xl bg-slate-800/40 border border-slate-800 hover:border-emerald-500/30 transition-colors">
+                <div className="flex items-center justify-between p-3 rounded-xl bg-slate-50/80 border border-slate-200/80 hover:border-emerald-300 hover:bg-white transition-all shadow-sm">
                   <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-emerald-500/10 text-emerald-400">
+                    <div className="p-2 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-100">
                       <Bot className="w-4 h-4" />
                     </div>
                     <div>
-                      <p className="text-xs font-semibold text-white">WhatsApp & Business Automation</p>
-                      <p className="text-[11px] text-slate-400">Cloud API • Python • Django</p>
+                      <p className="text-xs font-semibold text-slate-900">WhatsApp & Business Automation</p>
+                      <p className="text-[11px] text-slate-500">Meta Cloud API • Python • CRM</p>
                     </div>
                   </div>
-                  <span className="text-xs font-bold text-emerald-400 font-mono">Auto-Sync</span>
+                  <span className="text-xs font-bold text-emerald-700 font-mono">Auto-Lead Sync</span>
                 </div>
               </div>
 
               {/* Bottom Project Mini Stat Bar */}
-              <div className="p-3 bg-gradient-to-r from-brand-950/40 via-slate-900 to-indigo-950/40 border border-slate-800 rounded-xl flex items-center justify-between">
+              <div className="p-3 bg-gradient-to-r from-brand-50 via-slate-50 to-indigo-50 border border-slate-200 rounded-xl flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <Zap className="w-4 h-4 text-amber-400 animate-pulse" />
-                  <span className="text-xs font-medium text-slate-300">Recent Build: Arc Tech & Kalasaar</span>
+                  <Zap className="w-4 h-4 text-amber-500 animate-pulse" />
+                  <span className="text-xs font-medium text-slate-700">Case Study: Arc Tech Interior (+180% Leads)</span>
                 </div>
                 <a 
                   href="#projects" 
-                  className="text-xs font-semibold text-brand-400 hover:text-brand-300 inline-flex items-center gap-1"
+                  className="text-xs font-semibold text-brand-600 hover:text-brand-700 inline-flex items-center gap-1"
                 >
-                  Explore <ArrowRight className="w-3 h-3" />
+                  View Work <ArrowRight className="w-3 h-3" />
                 </a>
               </div>
             </div>

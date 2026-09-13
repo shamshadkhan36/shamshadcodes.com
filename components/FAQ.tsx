@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FAQ_ITEMS, BRAND } from '../constants';
 import SectionHeading from './ui/SectionHeading';
-import { ChevronDown, MessageSquare } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
+import WhatsAppIcon from './ui/WhatsAppIcon';
 import Button from './ui/Button';
 
 export const FAQ: React.FC = () => {
@@ -13,7 +14,7 @@ export const FAQ: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-24 relative">
+    <section id="faq" className="py-24 bg-white relative border-t border-slate-200">
       <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
         <SectionHeading
           badge="Got Questions?"
@@ -36,8 +37,8 @@ export const FAQ: React.FC = () => {
                 transition={{ delay: index * 0.05, duration: 0.3 }}
                 className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
                   isOpen
-                    ? 'bg-slate-900 border-brand-500/40 shadow-xl'
-                    : 'bg-slate-900/60 border-slate-800 hover:border-slate-700'
+                    ? 'bg-brand-50/30 border-brand-500 shadow-lg shadow-brand-500/10'
+                    : 'bg-white border-slate-200 hover:border-slate-300 shadow-sm'
                 }`}
               >
                 <button
@@ -45,14 +46,14 @@ export const FAQ: React.FC = () => {
                   className="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer select-none"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-base sm:text-lg font-bold text-white leading-snug">
+                  <span className="text-base sm:text-lg font-bold text-slate-900 leading-snug">
                     {item.question}
                   </span>
                   <div
                     className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-transform duration-300 ${
                       isOpen
-                        ? 'bg-brand-500 text-white rotate-180'
-                        : 'bg-slate-800 text-slate-400'
+                        ? 'bg-brand-600 text-white rotate-180'
+                        : 'bg-slate-100 text-slate-500'
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
@@ -67,7 +68,7 @@ export const FAQ: React.FC = () => {
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.25 }}
                     >
-                      <div className="px-6 pb-6 pt-2 text-sm sm:text-base text-slate-300 leading-relaxed border-t border-slate-800/60">
+                      <div className="px-6 pb-6 pt-2 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100">
                         {item.answer}
                       </div>
                     </motion.div>
@@ -79,13 +80,13 @@ export const FAQ: React.FC = () => {
         </div>
 
         {/* Still have questions bottom callout */}
-        <div className="mt-14 p-6 sm:p-8 rounded-2xl bg-slate-900/60 border border-slate-800 text-center flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-14 p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 text-center flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
           <div className="text-center sm:text-left">
-            <h4 className="text-base sm:text-lg font-bold text-white mb-1">
+            <h4 className="text-base sm:text-lg font-bold text-slate-900 mb-1">
               Have a specific question not listed here?
             </h4>
-            <p className="text-xs sm:text-sm text-slate-400">
-              Message me directly on WhatsApp for an immediate answer.
+            <p className="text-xs sm:text-sm text-slate-600">
+              Message our Lead Architect directly on WhatsApp for an immediate answer.
             </p>
           </div>
           <Button
@@ -93,7 +94,7 @@ export const FAQ: React.FC = () => {
             size="sm"
             href={BRAND.whatsappUrl}
             external
-            icon={<MessageSquare className="w-4 h-4" />}
+            icon={<WhatsAppIcon className="w-4 h-4 fill-white" />}
             className="flex-shrink-0"
           >
             Ask on WhatsApp
