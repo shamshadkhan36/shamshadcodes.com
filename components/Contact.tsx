@@ -92,14 +92,22 @@ export const Contact: React.FC = () => {
             transition={{ duration: 0.5 }}
           >
             {/* Quick WhatsApp Action Highlight */}
-            <div className="p-7 rounded-3xl bg-gradient-to-br from-emerald-50 via-white to-slate-50 border border-emerald-200 shadow-xl">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center border border-emerald-200 shadow-sm">
-                  <WhatsAppIcon className="w-6 h-6 fill-emerald-700" />
+            <div className="p-7 rounded-3xl bg-gradient-to-br from-emerald-50 via-white to-slate-50 border border-emerald-200 shadow-xl overflow-hidden relative">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="relative w-14 h-14 rounded-2xl overflow-hidden border-2 border-emerald-400/50 flex-shrink-0 shadow-md">
+                  <img
+                    src="/images/consultant_avatar.jpg"
+                    alt="WhatsApp Consultation Lead"
+                    className="w-full h-full object-cover"
+                  />
+                  <span className="absolute bottom-1 right-1 w-3 h-3 bg-emerald-500 rounded-full border-2 border-white"></span>
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-slate-900">Instant WhatsApp Inquiry</h3>
-                  <p className="text-xs text-emerald-700 font-semibold">Average reply time: Under 5 mins</p>
+                  <p className="text-xs text-emerald-700 font-semibold flex items-center gap-1.5">
+                    <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Lead Architect Online (5m Reply)
+                  </p>
                 </div>
               </div>
 

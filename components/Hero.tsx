@@ -145,9 +145,9 @@ export const Hero: React.FC = () => {
               <div className="flex items-center gap-4 bg-slate-50 border border-slate-200/80 p-3.5 rounded-2xl mb-5">
                 <div className="relative w-12 h-12 rounded-xl overflow-hidden border border-brand-500/30 flex-shrink-0 shadow-sm">
                   <img 
-                    src="/images/profile.jpg" 
-                    alt="Shamshad Khan - Technical Director" 
-                    className="w-full h-full object-cover object-top"
+                    src="/images/developer_avatar.jpg" 
+                    alt="Shamshad Khan - Technical Director & Founder" 
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="flex-1 min-w-0">

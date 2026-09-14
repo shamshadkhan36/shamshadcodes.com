@@ -48,9 +48,9 @@ export const About: React.FC = () => {
               <div className="relative rounded-3xl overflow-hidden bg-white border border-slate-200 p-3 shadow-2xl shadow-slate-200/80">
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-slate-100">
                   <img
-                    src="/images/profile.jpg"
+                    src="/images/developer_avatar.jpg"
                     alt="Shamshad Khan - Technical Director & Founder"
-                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
                   
@@ -105,6 +105,24 @@ export const About: React.FC = () => {
                 <p>
                   Unlike bloated agencies where your project gets passed between non-technical account managers and outsourced junior coders, our studio is led directly by <strong>Shamshad Khan</strong> (Lead Software Architect). Every line of code is structured for sub-second performance, strict security standards, and high ad conversion rates.
                 </p>
+              </div>
+
+              {/* Studio Workspace Visual */}
+              <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md my-4">
+                <img
+                  src="/images/team_workspace.jpg"
+                  alt="ShamshadCodes Agile Engineering Studio"
+                  className="w-full h-44 sm:h-48 object-cover object-center hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent flex items-end p-3.5">
+                  <div>
+                    <p className="text-xs font-bold font-mono text-brand-300 flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
+                      Agile Engineering Sprints
+                    </p>
+                    <p className="text-[11px] text-slate-200">Custom software architecture, mobile app builds & dedicated sprint delivery.</p>
+                  </div>
+                </div>
               </div>
             </div>
 
