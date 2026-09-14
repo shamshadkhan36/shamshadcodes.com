@@ -18,11 +18,7 @@ import WhatsAppIcon from './ui/WhatsAppIcon';
 
 export const QuoteEstimator: React.FC = () => {
   const [selectedServiceId, setSelectedServiceId] = useState<string>('business-web');
-  const [selectedAddonIds, setSelectedAddonIds] = useState<string[]>([
-    'payment-gateway',
-    'whatsapp-bot',
-    'advanced-seo'
-  ]);
+  const [selectedAddonIds, setSelectedAddonIds] = useState<string[]>([]);
   const [urgency, setUrgency] = useState<'normal' | 'express'>('normal');
 
   const selectedService = useMemo(() => {
