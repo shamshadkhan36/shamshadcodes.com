@@ -123,8 +123,28 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.7, delay: 0.15 }}
           >
             {/* Background Glow */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-brand-400/20 via-indigo-400/20 to-emerald-400/20 rounded-3xl blur-2xl opacity-60"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-brand-400/25 via-indigo-400/25 to-emerald-400/25 rounded-3xl blur-2xl opacity-60 animate-pulse-glow"></div>
             
+            {/* Floating Micro Badge Top Left */}
+            <motion.div
+              animate={{ y: [-5, 5, -5], rotate: [-1, 1, -1] }}
+              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+              className="absolute -top-3 -left-3 z-20 bg-white/95 backdrop-blur-md border border-brand-200/80 text-brand-700 font-mono text-[11px] font-bold py-1.5 px-3 rounded-xl shadow-lg shadow-brand-500/10 flex items-center gap-1.5 hidden sm:flex"
+            >
+              <span className="w-2 h-2 rounded-full bg-brand-500 animate-ping"></span>
+              <span>Direct Senior Sprint</span>
+            </motion.div>
+
+            {/* Floating Micro Badge Bottom Right */}
+            <motion.div
+              animate={{ y: [5, -5, 5], rotate: [1, -1, 1] }}
+              transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
+              className="absolute -bottom-3 -right-3 z-20 bg-white/95 backdrop-blur-md border border-emerald-200/80 text-emerald-700 font-mono text-[11px] font-bold py-1.5 px-3 rounded-xl shadow-lg shadow-emerald-500/10 flex items-center gap-1.5 hidden sm:flex"
+            >
+              <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span>100% Fixed Quote</span>
+            </motion.div>
+
             {/* Main Showcase Panel */}
             <div className="relative rounded-3xl bg-white border border-slate-200 p-6 sm:p-7 shadow-2xl shadow-slate-200/80 backdrop-blur-xl">
               {/* Card Header Bar */}

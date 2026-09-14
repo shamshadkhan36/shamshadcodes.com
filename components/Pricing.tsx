@@ -26,11 +26,12 @@ export const Pricing: React.FC = () => {
               key={plan.id}
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: index * 0.1, duration: 0.45 }}
-              className={`rounded-3xl p-7 lg:p-8 flex flex-col justify-between relative transition-all duration-300 ${
+              whileHover={{ y: -8, scale: 1.015, transition: { duration: 0.25, ease: 'easeOut' } }}
+              className={`rounded-3xl p-7 lg:p-8 flex flex-col justify-between relative transition-shadow duration-300 ${
                 plan.popular
-                  ? 'bg-white border-2 border-brand-500 shadow-2xl shadow-brand-500/20 -translate-y-2'
+                  ? 'bg-white border-2 border-brand-500 shadow-2xl shadow-brand-500/20'
                   : 'bg-white border border-slate-200 hover:border-slate-300 shadow-lg shadow-slate-200/50'
               }`}
             >

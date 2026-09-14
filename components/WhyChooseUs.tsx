@@ -49,9 +49,10 @@ export const WhyChooseUs: React.FC = () => {
                 key={point.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: index * 0.08, duration: 0.4 }}
-                className="p-7 rounded-3xl bg-white border border-slate-200 hover:border-indigo-400 transition-all flex flex-col justify-between group shadow-lg shadow-slate-200/50 hover:shadow-2xl"
+                whileHover={{ y: -8, scale: 1.015, transition: { duration: 0.25, ease: 'easeOut' } }}
+                className="p-7 rounded-3xl bg-white border border-slate-200 hover:border-indigo-400 transition-shadow duration-300 flex flex-col justify-between group shadow-lg shadow-slate-200/50 hover:shadow-2xl"
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">

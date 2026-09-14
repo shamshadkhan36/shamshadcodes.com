@@ -118,9 +118,11 @@ export const QuoteEstimator: React.FC = () => {
                   const Icon = serv.icon;
                   const isSelected = selectedServiceId === serv.id;
                   return (
-                    <button
+                    <motion.button
                       key={serv.id}
                       type="button"
+                      whileHover={{ scale: 1.015, y: -2 }}
+                      whileTap={{ scale: 0.98 }}
                       onClick={() => setSelectedServiceId(serv.id)}
                       className={`p-4 rounded-2xl text-left border transition-all duration-200 cursor-pointer relative flex flex-col justify-between ${
                         isSelected
@@ -150,7 +152,7 @@ export const QuoteEstimator: React.FC = () => {
                         <span className="text-slate-600 font-mono font-medium">Base: ₹{serv.basePrice.toLocaleString('en-IN')}</span>
                         <span className="text-emerald-700 font-mono font-bold">~{serv.baseDays}d sprint</span>
                       </div>
-                    </button>
+                    </motion.button>
                   );
                 })}
               </div>
@@ -174,10 +176,12 @@ export const QuoteEstimator: React.FC = () => {
                 {ESTIMATOR_ADDONS.map((addon) => {
                   const isChecked = selectedAddonIds.includes(addon.id);
                   return (
-                    <div
+                    <motion.div
                       key={addon.id}
+                      whileHover={{ scale: 1.01, x: 2 }}
+                      whileTap={{ scale: 0.99 }}
                       onClick={() => toggleAddon(addon.id)}
-                      className={`p-3.5 rounded-2xl border transition-all duration-200 cursor-pointer flex items-center justify-between gap-4 ${
+                      className={`p-3.5 rounded-2xl border transition-colors duration-200 cursor-pointer flex items-center justify-between gap-4 ${
                         isChecked
                           ? 'bg-brand-50/50 border-brand-500 shadow-sm'
                           : 'bg-slate-50/60 border-slate-200 hover:border-slate-300 hover:bg-white'
@@ -199,15 +203,18 @@ export const QuoteEstimator: React.FC = () => {
                         </div>
                       </div>
 
-                      <div className="flex items-center gap-2 flex-shrink-0 font-mono text-xs font-bold text-slate-800">
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        className="flex items-center gap-2 flex-shrink-0 font-mono text-xs font-bold text-slate-800"
+                      >
                         <span>+₹{addon.price.toLocaleString('en-IN')}</span>
                         {addon.extraDays > 0 && (
                           <span className="text-[10px] text-slate-500 hidden sm:inline">
                             (+{addon.extraDays}d)
                           </span>
                         )}
-                      </div>
-                    </div>
+                      </motion.div>
+                    </motion.div>
                   );
                 })}
               </div>

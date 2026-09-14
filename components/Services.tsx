@@ -27,9 +27,10 @@ export const Services: React.FC = () => {
                 key={service.id}
                 initial={{ opacity: 0, y: 25 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: index * 0.08, duration: 0.5 }}
-                className="group relative rounded-3xl bg-white border border-slate-200 p-7 flex flex-col justify-between hover:border-brand-500/50 hover:shadow-2xl hover:shadow-brand-500/10 transition-all duration-300 shadow-lg shadow-slate-200/50"
+                whileHover={{ y: -8, transition: { duration: 0.25, ease: 'easeOut' } }}
+                className="group relative rounded-3xl bg-white border border-slate-200 p-7 flex flex-col justify-between hover:border-brand-500/50 hover:shadow-2xl hover:shadow-brand-500/10 transition-shadow duration-300 shadow-lg shadow-slate-200/50"
               >
                 <div>
                   {/* Top Header */}

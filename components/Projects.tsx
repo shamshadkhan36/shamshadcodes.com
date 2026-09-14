@@ -79,8 +79,9 @@ export const Projects: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.96 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.96 }}
+                whileHover={{ y: -8, transition: { duration: 0.25, ease: 'easeOut' } }}
                 transition={{ duration: 0.35, delay: index * 0.05 }}
-                className="group rounded-3xl bg-white border border-slate-200 overflow-hidden flex flex-col justify-between hover:border-slate-300 hover:shadow-2xl hover:shadow-slate-200/80 transition-all duration-300 shadow-lg shadow-slate-200/50"
+                className="group rounded-3xl bg-white border border-slate-200 overflow-hidden flex flex-col justify-between hover:border-brand-300 hover:shadow-2xl hover:shadow-slate-200/80 transition-shadow duration-300 shadow-lg shadow-slate-200/50"
               >
                 <div>
                   {/* Mockup Frame Header */}

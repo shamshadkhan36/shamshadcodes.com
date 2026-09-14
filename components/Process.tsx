@@ -73,9 +73,13 @@ export const Process: React.FC = () => {
 
                   {/* Center Step Badge */}
                   <div className="relative z-10 flex-shrink-0 flex items-center justify-center">
-                    <div className="w-14 h-14 rounded-2xl bg-white border-2 border-brand-500 flex items-center justify-center text-brand-700 font-mono font-extrabold text-lg shadow-xl shadow-brand-500/20">
+                    <motion.div 
+                      whileHover={{ scale: 1.15, rotate: 5 }}
+                      transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+                      className="w-14 h-14 rounded-2xl bg-white border-2 border-brand-500 flex items-center justify-center text-brand-700 font-mono font-extrabold text-lg shadow-xl shadow-brand-500/20 cursor-default"
+                    >
                       {step.step}
-                    </div>
+                    </motion.div>
                   </div>
 
                   {/* Empty Spacer on Opposite Side */}
